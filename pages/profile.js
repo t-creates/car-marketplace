@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Login from '../components/Login';
-import { userQuery, userCreatedCarsQuery } from '../utils/queries';
-import { client, urlFor } from '../utils/client';
+import { userCreatedCarsQuery } from '../utils/queries';
+import { client } from '../utils/client';
 import CardLayout from '../components/CardLayout';
 
 const Profile = () => {
   const [user, setUser] = useState({});
   const [cars, setCars] = useState();
-  const [text, setText] = useState('Created');
-  const [loading, setLoading] = useState(true);
+  // const [text, setText] = useState('Created');
+  // const [loading, setLoading] = useState(true);
   const { userId } = useRouter();
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Profile = () => {
           <div className="text-slate-100 hover:text-slate-600 font-[Poppins] duration-500 mb-10">Welcome {user.name}</div>
           <img width="100px" height="100px" className="rounded-full" src={user.picture} />
           <div className="flex flex-row flex-wrap justify-evenly grid-flow-row justify-self-auto mt-96  sm:mt-0">
-            {/* <CardLayout searchResults={cars} carData={cars} /> */}
+            <CardLayout searchResults={cars} carData={cars} />
           </div>
         </div>
       </div>

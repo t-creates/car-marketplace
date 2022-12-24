@@ -99,7 +99,7 @@ const CarSale = () => {
           placeholder="Year"
           className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
         />
-        <label>
+        <label htmlFor={image}>
           <div className="flex flex-col items-center justify-center h-full cursor-pointer">
             <div className="flex flex-col justify-center items-center m-0 p-0">
               <p className="mt-1 text-2xl text-gray-200">
@@ -116,6 +116,7 @@ const CarSale = () => {
             name="upload-image"
             onChange={uploadImage}
             className="w-0 h-0"
+            value={setImage}
           />
         </label>
         <button type="submit" className="bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none">Submit</button>

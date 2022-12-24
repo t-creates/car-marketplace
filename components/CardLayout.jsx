@@ -5,7 +5,7 @@ import CarCards from './CarCards';
 
 const CardLayout = ({ searchResults }) => {
 
-  const results = searchResults.map((car) => (
+  const results = searchResults?.map((car) => (
     <div key={car.title} className="justify-evenly " >
       <CarCards name={car.title} img={urlFor(car.image).width(250).url()} monthlyPrice={car.price} mpg={car.mpg} transmission={car.transmission} seats={car.seats} />
     </div>
