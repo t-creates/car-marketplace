@@ -17,7 +17,7 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <div className={`shadow-lg w-full fixed top-[-1px] left-0 h-[65px] ${router.query.id ? 'bg-slate-800' : 'bg-[#A5A8Ac]'} z-30`}>
+    <div className={`shadow-lg w-full fixed top-[-1px] left-0 h-[65px] ${router.query.id ? 'bg-[#A5A8Ac]' : 'bg-[#A5A8Ac]'} z-30`}>
       <div className={`md:flex items-center justify-between md:justify-center bg-transparent py-4 md:px-10 px-7 ${open ? 'justify-center items-center' : ''}`}>
         <div
           className='text-4xl font-semibold cursor-pointer flex items-center absolute left-1 pl-5 text-slate-800'>

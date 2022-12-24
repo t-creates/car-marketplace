@@ -43,7 +43,7 @@ const CarCards = ({ name, mpg, img, seats, monthlyPrice }) => {
                             <Link href={`/car-details/${name}`}>
                                 <Button
                                     variant="contained"
-                                    className="border-2 border-slate-800 text-slate-800  hover:scale-105">See More Details</Button>
+                                    className="border-2 bg-slate-50/75 border-slate-800 text-slate-800 hover:bg-slate-50/75 hover:scale-105">See More Details</Button>
                             </Link>
                         </Box>
                     </Box>

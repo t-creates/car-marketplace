@@ -1,9 +1,10 @@
 /*eslint-disable*/
-import React, {useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { client } from '../../utils/client';
 import { carsQuery } from '../../utils/queries';
 import { urlFor } from '../../utils/client';
+import Image from 'next/image';
 
 // const fetchPinDetails = () => {
 //   const query = pinDetailQuery(pinId);
@@ -31,29 +32,42 @@ const CarDetail = () => {
     });
   }, [router.query.id]);
 
-  return(
-    <div className="mt-[60px] bg-slate-900">
-      {carData.map((car) => (
-        router.query.id === car.title ? (
-          <div className="w-full h-screen flex flex-col justify-top items-center text-center pt-5" key={car.title}>
-            <div>
-              <h2 className="text-4xl font-medium text-[#00df9a] "> {car.title} - {car.year}</h2>
-             
-              <img className='mt-5 rounded-md'src ={urlFor(car.image).width(600).url()} size={45}/>
-            </div>
-            <div className='flex flex-row gap-4 mt-5 text-[#00df9a]'>
-              <h2>Mpg: {car.mpg}</h2>
-              <h2>Seats: {car.seats}</h2>
-              <p>Transmission: {car.transmission}</p>
-            </div>
-            <div className="text-[#00df9a]">
-            <h2 className='text-4xl '>$ {car.price} </h2>
-              {car.about}
-            </div>
-          </div>) : ''
-      ))}
-    </div>
-  ) 
+  return (
+    <div className="w-full h-screen pt-[60px] flex items-center justify-center">
+      <div className="box-border w-[58%] h-[50%] pb-10 my-5 text-slate-900 shadow-2xl backdrop-blur-sm bg-white rounded">
+        <div className="">
+          {carData.map((car) => (
+            router.query.id === car.title ? (
+              <div className='w-100 h-100 grid' key={car.title}>
+                <div className='h-[100%] w-[65%] fixed'>
+                  <Image className='rounded-l' src={urlFor(car.image).url()} layout='fill' />
+                </div>
+                <div className='w-[35%] h-100 flex justify-self-end place-items-end'>
+                  <div className='flex justify-self-center place-items-center flex-col gap-5 pl-3'>
+                    <h2 className="text-3xl raleway pt-5 font-bold"> {car.title}</h2>
+                    <h2 className='raleway font-semibold text-lg'>Year: {car.year}</h2>
+                    <h2 className='raleway font-semibold text-lg'>Mpg: {car.mpg}</h2>
+                    <h2 className='raleway font-semibold text-lg'>Seats: {car.seats}</h2>
+                    <p className='raleway font-semibold text-lg'>Transmission: {car.transmission}</p>
+                    <h2 className='raleway font-semibold text-lg'>Price: $ {car.price} </h2>
+                    {car.about}
+                    <div className="pt-10 flex place-items-center justify-self-center">
+                      <button
+                        type="submit"
+                        className="border-2 p-2 rounded bg-slate-50/75 border-slate-800 text-slate-800 hover:bg-slate-50/75 hover:scale-105
+                        flex items-center justify-center h-10 w-[100%]"
+                      >
+                        Proceed to Payment Options
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>) : ''
+          ))}
+        </div>
+      </div>
+    </div >
+  )
 };
 
 export default CarDetail;

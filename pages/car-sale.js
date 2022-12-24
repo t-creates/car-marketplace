@@ -54,18 +54,18 @@ const CarSale = () => {
     router.push('/');
   };
 
-  // slice, map for inputs
+  // map for inputs for cleaner code
 
   return (
     <div className="w-full h-screen pt-[60px] flex items-center justify-center">
-      <div className="box-border w-[75%] h-[50%] h-50 my-5 text-slate-900 shadow-2xl backdrop-blur-sm bg-white rounded-b">
+      <div className="box-border w-[75%] h-[70%] pb-10 my-5 text-slate-900 shadow-2xl backdrop-blur-sm bg-white rounded">
         <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center pt-10 gap-4">
-          <div className="grid grid-rows-2">
+          <div className="grid grid-cols-1 pb-10">
             <label htmlFor={image}>
               <div className="grid cursor-pointer">
-                <div className="flex flex-col justify-center items-center m-0 p-0">
-                  <p className="mt-1 text-2xl text-gray-200">
-                    Upload your car Images
+                <div className="flex flex-col justify-center items-center">
+                  <p className="mt-1 text-2xl text-slate-800 raleway">
+                    Upload Your Car Images
                   </p>
                   <p className="font-bold text-2xl mt-3">
                     <AiOutlineCloudUpload />
@@ -81,56 +81,76 @@ const CarSale = () => {
                 value={setImage}
               />
             </label>
+          </div>
+          <div className="grid grid-cols-2 w-[90%] gap-4">
+            <div>
+              <input
+                type="text"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="Car Title"
+                className="border-2 bg-slate-50/75 border-slate-800 placeholder-slate-800 hover:bg-slate-50/75 raleway
+                text-lg w-[100%] rounded p-2 h-[80%] outline-none"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                placeholder="Car Price"
+                className="border-2 bg-slate-50/75 border-slate-800 placeholder-slate-800 hover:bg-slate-50/75 raleway
+                text-lg w-[100%] rounded p-2 h-[80%] outline-none"
+              />
+            </div>
+            <div>
+              <input
+                type="number"
+                value={year}
+                onChange={(e) => setYear(e.target.value)}
+                placeholder="Year"
+                className="border-2 bg-slate-50/75 border-slate-800 placeholder-slate-800 hover:bg-slate-50/75 raleway
+                text-lg w-[100%] rounded p-2 h-[80%] outline-none"
+              />
+            </div>
+            <div>
+              <input
+                type="number"
+                value={mpg}
+                onChange={(e) => setMpg(e.target.value)}
+                placeholder="MPG"
+                className="border-2 bg-slate-50/75 border-slate-800 placeholder-slate-800 hover:bg-slate-50/75 raleway
+                text-lg w-[100%] rounded p-2 h-[80%] outline-none"
+              />
+            </div>
+            <div>
+              <input
+                type="number"
+                value={seats}
+                onChange={(e) => setSeats(e.target.value)}
+                placeholder="Seats"
+                className="border-2 bg-slate-50/75 border-slate-800 placeholder-slate-800 hover:bg-slate-50/75 raleway
+                text-lg w-[100%] rounded p-2 h-[80%] outline-none"
+              />
+            </div>
+            <div>
+              <input
+                value={transmission}
+                type="transmission"
+                placeholder="Transmission Type"
+                onChange={(e) => setTransmission(e.target.value)}
+                className="border-2 bg-slate-50/75 border-slate-800 placeholder-slate-800 hover:bg-slate-50/75 raleway
+                text-lg w-[100%] rounded p-2 h-[80%] outline-none"
+              />
+            </div>
+          </div>
+          <div className="pt-10">
             <button
               type="submit"
-              className="border-2 border-slate-800 text-slate-800 rounded hover:scale-105 h-10 w-60"
+              className="border-2 rounded bg-slate-50/75 border-slate-800 text-slate-800 hover:bg-slate-50/75 hover:scale-105 h-10 w-60"
             >
-              Submit
+              Post For Sale
             </button>
-          </div>
-          <div>
-            <input
-              type="text"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              placeholder="Car Title"
-              className="outline-none text-2xl sm:text-3xl font-bold w-[300px] rounded p-2 h-10"
-            />
-            <input
-              type="text"
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
-              placeholder="Car Price"
-              className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
-            />
-            <input
-              type="number"
-              value={year}
-              onChange={(e) => setYear(e.target.value)}
-              placeholder="Year"
-              className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
-            />
-            <input
-              type="number"
-              value={mpg}
-              onChange={(e) => setMpg(e.target.value)}
-              placeholder="Mpg"
-              className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
-            />
-            <input
-              type="number"
-              value={seats}
-              onChange={(e) => setSeats(e.target.value)}
-              placeholder="Seats"
-              className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
-            />
-            <input
-              value={year}
-              type="transmission"
-              placeholder="Year"
-              onChange={(e) => setTransmission(e.target.value)}
-              className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
-            />
           </div>
         </form>
       </div>

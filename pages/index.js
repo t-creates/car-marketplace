@@ -33,7 +33,7 @@ const Home = () => {
         <h1 className="text-slate-800 raleway text-shadow-1 text-2xl md:text-4xl mb-2 mt-3 text-center">Search for cars</h1>
         <SearchBar cars={cars} setSearchResults={setSearchResults} />
       </div>
-      <div className="flex flex-row flex-wrap justify-evenly grid-flow-row justify-self-auto mt-96  sm:mt-0">
+      <div className="flex flex-row flex-wrap justify-evenly grid-flow-row justify-self-auto mt-96 pb-10 sm:mt-0">
         <CardLayout searchResults={searchResults} />
       </div>
     </div>

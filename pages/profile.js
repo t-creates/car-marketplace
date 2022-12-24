@@ -31,10 +31,10 @@ const Profile = () => {
 
   if (user) {
     return (
-      <div>
-        <div className="flex flex-col justify-center items-center top-0 right-0 bottom-0 left-0 mt-48 mb-48">
-          <div className="text-slate-100 hover:text-slate-600 font-[Poppins] duration-500 mb-5">Login Successful</div>
-          <div className="text-slate-100 hover:text-slate-600 font-[Poppins] duration-500 mb-10">Welcome {user.name}</div>
+      <div className="w-screen h-screen">
+        <div className="flex flex-col justify-center items-center pt-48 mb-48">
+          <div className="text-slate-800 hover:text-slate-600 font-[Poppins] duration-500 mb-5">Login Successful</div>
+          <div className="text-slate-800 hover:text-slate-600 font-[Poppins] duration-500 mb-10">Welcome {user.name}</div>
           <img width="100px" height="100px" className="rounded-full" src={user.picture} />
           <div className="flex flex-row flex-wrap justify-evenly grid-flow-row justify-self-auto mt-96  sm:mt-0">
             <CardLayout searchResults={cars} carData={cars} />
