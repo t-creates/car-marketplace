@@ -18,10 +18,11 @@ const SearchBar = ({ cars, setSearchResults }) => {
           name="search"
           id={uuid}
           onChange={handleSearch}
-          className="lg:w-[750px] lg:h-[35px] md:w-[450px] text-xl rounded font-light p2 shadow-xl bg-slate-700 focus:outline-none capitalize  "
-          placeholder=" Search for Cars..." />
+          className="lg:w-[750px] lg:h-[35px] md:w-[450px] text-xl rounded bg-white
+                    font-light p2 shadow-xl border-2 border-slate-300 text-slate-200  focus:outline-none capitalize "
+          placeholder=" ..." />
         <button className="bg-transparent rounded">
-          <BiSearch className="hover:scale-125 ml-1 cursor-pointer" size={35} />
+          <BiSearch className="hover:scale-125 ml-1 cursor-pointer text-slate-800/80" size={35} />
         </button>
       </div>
     </div>

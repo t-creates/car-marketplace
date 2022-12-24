@@ -12,13 +12,13 @@ const Footer = () => {
 				<div className="p-5 ">
 					<ul>
 						<h1 className="text-gray-800 font-bold text-3xl pb-6">
-							Nasty<span className="text-indigo-600">Autos</span>
+							Car<span className="text-slate-800">Marketplace</span>
 						</h1>
 						<div className="flex gap-6 pb-5">
-							<FaInstagram className="text-2xl cursor-pointer hover:text-yellow-600" />
-							<FaTwitter className="text-2xl cursor-pointer hover:text-blue-600" />
-							<FaLinkedin className="text-2xl cursor-pointer hover:text-blue-600" />
-							<FaYoutube className="text-2xl cursor-pointer hover:text-red-600" />
+							<FaInstagram className="text-2xl cursor-pointer hover:pulse text-pink-700" />
+							<FaTwitter className="text-2xl cursor-pointer hover:pulse text-blue-600" />
+							<FaLinkedin className="text-2xl cursor-pointer hover:pulse text-blue-600" />
+							<FaYoutube className="text-2xl cursor-pointer hover:pulse text-red-600" />
 						</div>
 					</ul>
 				</div>
@@ -84,7 +84,7 @@ const Footer = () => {
 				<h2 className=" text-gray-800 font-semibold">
 					© 2021-2022 All rights reserved | Build with ❤ by{" "}
 					<span className="hover:text-blue-600 font-semibold cursor-pointer">
-						Nasty Autos{" "}
+						Car Marketplace{" "}
 					</span>
 				</h2>
 			</div>

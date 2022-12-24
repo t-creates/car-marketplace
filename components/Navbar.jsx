@@ -17,11 +17,11 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <div className={`shadow-lg w-full fixed top-0 left-0 h-[60px] ${router.query.id ? 'bg-indigo-600' : 'bg-[#A5A8Ac]'} z-30`}>
+    <div className={`shadow-lg w-full fixed top-[-1px] left-0 h-[65px] ${router.query.id ? 'bg-slate-800' : 'bg-[#A5A8Ac]'} z-30`}>
       <div className={`md:flex items-center justify-between md:justify-center bg-transparent py-4 md:px-10 px-7 ${open ? 'justify-center items-center' : ''}`}>
         <div
           className='text-4xl font-semibold cursor-pointer flex items-center absolute left-1 pl-5 text-slate-800'>
-          <h1 className='drop-shadow-lg'>Nasty Autos</h1>
+          <h1 className='drop-shadow-lg'>Car Marketplace</h1>
         </div>
         <div className='text-3xl absolute right-5 top-2 cursor-pointer bg-transparent scale-125 md:hidden '>
           <MenuOutlinedIcon
@@ -29,7 +29,7 @@ const Navbar = () => {
             className={open ? 'close bg-slate-700' : 'menu'}></MenuOutlinedIcon>
         </div>
 
-        <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-inherit md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-14 bg-slate-500' : 'top-[-490px]'}`}>
+        <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-inherit md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-16 bg-slate-500' : 'top-[-490px]'}`}>
           {
             links.map((link) => (
               <li key={link.name} className='md:ml-8 text-xl justify-between md:my-0 my-7'>
@@ -38,9 +38,9 @@ const Navbar = () => {
             ))
           }
         </ul>
-        <div className="absolute right-20">
+        <div className="absolute right-16">
           <a href='/profile'>
-            <BiUserCircle size={28} className='mt-o.5 md:mr-5 cursor-pointer hover:text-slate-600' />
+            <BiUserCircle size={28} className='md:mr-5 cursor-pointer hover:text-slate-600' />
           </a>
         </div>
       </div>

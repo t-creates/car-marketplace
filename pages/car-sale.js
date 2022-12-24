@@ -39,6 +39,7 @@ const CarSale = () => {
       mpg,
       seats,
       transmission,
+      year,
       image: {
         _type: 'image',
         asset: {
@@ -46,7 +47,6 @@ const CarSale = () => {
           _ref: imageAsset?._id,
         },
       },
-      year,
     };
 
     client.createIfNotExists(car);
@@ -54,73 +54,86 @@ const CarSale = () => {
     router.push('/');
   };
 
+  // slice, map for inputs
+
   return (
-    <div className="w-full h-screen bg-slate-800 pt-[60px]">
-      <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center pt-10 gap-4">
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Car Title"
-          className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
-        />
-        <input
-          type="text"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-          placeholder="Car Price"
-          className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
-        />
-        <input
-          type="number"
-          value={year}
-          onChange={(e) => setYear(e.target.value)}
-          placeholder="Year"
-          className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
-        />
-        <input
-          type="number"
-          value={mpg}
-          onChange={(e) => setMpg(e.target.value)}
-          placeholder="Mpg"
-          className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
-        />
-        <input
-          type="number"
-          value={seats}
-          onChange={(e) => setSeats(e.target.value)}
-          placeholder="No.of Seats"
-          className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
-        />
-        <input
-          type="transmission"
-          value={year}
-          onChange={(e) => setTransmission(e.target.value)}
-          placeholder="Year"
-          className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
-        />
-        <label htmlFor={image}>
-          <div className="flex flex-col items-center justify-center h-full cursor-pointer">
-            <div className="flex flex-col justify-center items-center m-0 p-0">
-              <p className="mt-1 text-2xl text-gray-200">
-                Upload your car Images
-              </p>
-              <p className="font-bold text-2xl mt-3">
-                <AiOutlineCloudUpload />
-              </p>
-              <p className="text-lg">Click to upload</p>
-            </div>
+    <div className="w-full h-screen pt-[60px] flex items-center justify-center">
+      <div className="box-border w-[75%] h-[50%] h-50 my-5 text-slate-900 shadow-2xl backdrop-blur-sm bg-white rounded-b">
+        <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center pt-10 gap-4">
+          <div className="grid grid-rows-2">
+            <label htmlFor={image}>
+              <div className="grid cursor-pointer">
+                <div className="flex flex-col justify-center items-center m-0 p-0">
+                  <p className="mt-1 text-2xl text-gray-200">
+                    Upload your car Images
+                  </p>
+                  <p className="font-bold text-2xl mt-3">
+                    <AiOutlineCloudUpload />
+                  </p>
+                  <p className="text-lg">Click to upload</p>
+                </div>
+              </div>
+              <input
+                type="file"
+                name="upload-image"
+                onChange={uploadImage}
+                className="w-0 h-0"
+                value={setImage}
+              />
+            </label>
+            <button
+              type="submit"
+              className="border-2 border-slate-800 text-slate-800 rounded hover:scale-105 h-10 w-60"
+            >
+              Submit
+            </button>
           </div>
-          <input
-            type="file"
-            name="upload-image"
-            onChange={uploadImage}
-            className="w-0 h-0"
-            value={setImage}
-          />
-        </label>
-        <button type="submit" className="bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none">Submit</button>
-      </form>
+          <div>
+            <input
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder="Car Title"
+              className="outline-none text-2xl sm:text-3xl font-bold w-[300px] rounded p-2 h-10"
+            />
+            <input
+              type="text"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              placeholder="Car Price"
+              className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
+            />
+            <input
+              type="number"
+              value={year}
+              onChange={(e) => setYear(e.target.value)}
+              placeholder="Year"
+              className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
+            />
+            <input
+              type="number"
+              value={mpg}
+              onChange={(e) => setMpg(e.target.value)}
+              placeholder="Mpg"
+              className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
+            />
+            <input
+              type="number"
+              value={seats}
+              onChange={(e) => setSeats(e.target.value)}
+              placeholder="Seats"
+              className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
+            />
+            <input
+              value={year}
+              type="transmission"
+              placeholder="Year"
+              onChange={(e) => setTransmission(e.target.value)}
+              className="outline-none text-2xl sm:text-3xl font-bold w-[400px] rounded p-2 h-10"
+            />
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import Head from 'next/head';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import { Navbar, Footer, Layout } from '../components';
+import { Layout } from '../components';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }) => (
@@ -14,11 +14,9 @@ const MyApp = ({ Component, pageProps }) => (
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <Navbar />
     <Layout>
       <Component {...pageProps} />
     </Layout>
-    <Footer />
   </GoogleOAuthProvider>
 );
 
