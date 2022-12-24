@@ -2,7 +2,7 @@ import React from 'react';
 
 const carDetail = () => {
   return (
-    <div>carDetail</div>
+    <div>carDetail Page</div>
   );
 };
 
