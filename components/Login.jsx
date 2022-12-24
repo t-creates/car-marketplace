@@ -1,15 +1,14 @@
 import React from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import { FcGoogle } from 'react-icons/fc';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 
 import { client } from '../utils/client';
 
 const Login = () => {
-  const router = useRouter();
+  // const router = useRouter();
 
   const responseGoogle = (response) => {
-
     const base64Url = response.credential.split('.')[1];
     const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
     const jsonPayload = decodeURIComponent(atob(base64).split('').map((c) => `%${(`00${c.charCodeAt(0).toString(16)}`).slice(-2)}`).join(''));
