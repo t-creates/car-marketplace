@@ -16,21 +16,18 @@ const Profile = () => {
     if (typeof window !== 'undefined') {
       setUser(JSON.parse(window.localStorage.getItem('user')));
     }
-<<<<<<< HEAD
   }, []);
 
-  // useEffect(() => {
-  //   if (user) {
-  //     const createdCarsQuery = userCreatedCarsQuery(userId);
+  useEffect(() => {
+    if (user) {
+      const createdCarsQuery = userCreatedCarsQuery(userId);
 
-  //     client.fetch(createdCarsQuery).then((data) => {
-  //       setCars(data);
-  //     });
-  //   }
-  // }, [text, userId]);
-=======
+      client.fetch(createdCarsQuery).then((data) => {
+        setCars(data);
+      });
+    }
+    // }, [text, userId]);
   }, [user]);
->>>>>>> d8e725264709928a0d459c8bfeb85570e340f6a2
 
   if (user) {
     return (
@@ -40,7 +37,7 @@ const Profile = () => {
           <div className="text-slate-100 hover:text-slate-600 font-[Poppins] duration-500 mb-10">Welcome {user.name}</div>
           <img width="100px" height="100px" className="rounded-full" src={user.picture} />
           <div className="flex flex-row flex-wrap justify-evenly grid-flow-row justify-self-auto mt-96  sm:mt-0">
-            <CardLayout searchResults={cars} carData={cars} />
+            {/* <CardLayout searchResults={cars} carData={cars} /> */}
           </div>
         </div>
       </div>
