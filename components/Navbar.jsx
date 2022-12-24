@@ -7,7 +7,7 @@ import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import Link from 'next/link';
 
 const links = [
-  { name: "Home", link: "" },
+  { name: "Home", link: "/" },
   { name: "Sell a car", link: "/car-sale" },
 ];
 
