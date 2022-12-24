@@ -10,7 +10,6 @@ const SearchBar = ({ cars, setSearchResults }) => {
     setSearchResults(resultsArray);
   }
 
-
   return (
     <div className="flex flex-row justify-center align-middle items-center z-20">
       <div className="flex flex-row justify-center align-middle items-center my-4">
