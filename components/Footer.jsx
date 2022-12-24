@@ -6,9 +6,9 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
-  return (
-    <>
-			<div className="bg-gray-50 h-1/2 w-full flex md:flex-row flex-col justify-around items-start p-20">
+	return (
+		<>
+			<div className="bg-gray-50 w-full flex md:flex-row flex-col justify-around items-start p-12">
 				<div className="p-5 ">
 					<ul>
 						<h1 className="text-gray-800 font-bold text-3xl pb-6">
@@ -88,7 +88,7 @@ const Footer = () => {
 					</span>
 				</h2>
 			</div>
-    </>
+		</>
 	);
 };
 export default Footer;

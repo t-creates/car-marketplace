@@ -21,16 +21,16 @@ const Home = () => {
   if (loading) return 'loading';
 
   return (
-    <div className="bg-slate-800 mt-[60px]">
+    <div className="bg-slate-800 mt-[60px] w-full h-full">
       <div className="flex-col flex-wrap auto-cols-auto">
         <div className="w-full h-screen  absolute">
           <Banner />
         </div>
         <div className="flex justify-center pt-[60px]">
-          <h1 className="text-black-600 font-bold md:text-6xl mb-2 mt-3 sm:text-4xl sm:z-10">Luxury Cars</h1>
+          <h1 className="text-black-600 font-bold md:text-8xl mb-2 mt-3 sm:text-4xl sm:z-10">Luxury Cars</h1>
         </div>
-        <div className="sm:mb-0 md:mb-96 mt-100" />
-        <div className="flex justify-center flex-col pt-[90px]">
+        <div className="sm:mb-0 md:mb-24 xl:mb-[350px] lg:mb-[175px] 2xl:mb-[550px] mt-100" />
+        <div className="flex justify-center flex-col sm:pt-5 md:pt-[90px]">
           <h1 className="text-neutral-100 text-3xl font-bold md:font-sans md:text-5xl mb-2 mt-3 text-center">Search for cars</h1>
           <SearchBar cars={cars} setSearchResults={setSearchResults} />
         </div>
