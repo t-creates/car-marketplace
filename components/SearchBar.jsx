@@ -1,7 +1,7 @@
 /*eslint-disable */
 import React from 'react';
 import { BiSearch } from 'react-icons/bi';
-import uuid from 'uuid/v4';
+import { v4 as uuid } from "uuid";
 
 const SearchBar = ({ cars, setSearchResults }) => {
   const handleSearch = (e) => {
