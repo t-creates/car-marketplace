@@ -41,9 +41,12 @@ const CarCards = ({ name, mpg, img, seats, monthlyPrice }) => {
                             backgroundColor="white"
                             className="rounded mx-3 items-center justify-center flex">
                             <Link href={`/car-details/${name}`}>
-                                <Button
-                                    variant="contained"
-                                    className="border-2 bg-slate-50/75 border-slate-800 text-slate-800 hover:bg-slate-50/75 hover:scale-105">See More Details</Button>
+                                <button
+                                    type="button"
+                                    className="border-2 rounded bg-slate-50/75 border-slate-800 text-slate-800 hover:bg-slate-50/75 hover:scale-105 h-10 w-60"
+                                >
+                                    See More Details
+                                </button>
                             </Link>
                         </Box>
                     </Box>
