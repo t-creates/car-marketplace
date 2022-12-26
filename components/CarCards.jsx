@@ -3,9 +3,8 @@ import React from 'react';
 
 import Link from 'next/link';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import { MdLocalGasStation } from 'react-icons/md';
-
+import { GiCarSeat } from 'react-icons/gi';
 
 const CarCards = ({ name, mpg, img, seats, monthlyPrice }) => {
     return (
@@ -17,22 +16,23 @@ const CarCards = ({ name, mpg, img, seats, monthlyPrice }) => {
                 }}
             >
                 <Box className='flex flex-col'>
-                    <Box className='pb-4'>
+                    <Box className='pb-2'>
                         <Box className='rounded-t' >
                             <img className="object-fit h-44 w-96 rounded-t" alt="car-image" src={`${img}`} />
                         </Box>
-                        <Box className="flex flex-col justify-between p-2 pt-5 ">
+                        <Box className="flex flex-col justify-between p-2 pt-5 gap-1">
                             <Box className='pl-1'>
                                 $ <span className='font-semibold'>{monthlyPrice}</span>
                             </Box>
-                            <Box className='font-semibold text-base pl-1'>
+                            <Box className='font-semibold text-base pl-1 raleway'>
                                 {name}
                             </Box>
                             <Box className='flex flex-row items'>
-                                <MdLocalGasStation size={20} /> {mpg} MPG
+                                <MdLocalGasStation size={20} /> <span className='pl-2'>{mpg} MPG</span>
                             </Box>
-                            <Box className='pl-1'>
-                                {!seats ? (<br />) : (`${seats} Seats`)}
+                            <Box className='pl-1 flex flex-row'>
+                                <GiCarSeat size={20} />
+                                <span className='pl-2'>{seats} Seats</span>
                             </Box>
                         </Box>
                     </Box>
