@@ -38,10 +38,10 @@ const CarDetail = () => {
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center lg:px-28 md:px-20 overflow-x-auto">
       <div
-        className='text-slate-800 font-semibold text-lg cursor-pointer hover:text-slate-900 place-self-start flex flex-row items-center'
+        className='text-slate-800 raleway text-base cursor-pointer hover:text-slate-900 place-self-start flex flex-row items-center'
         onClick={() => router.back()}
       >
-        <span className='pr-2'><IoIosArrowBack /></span>
+        <span className='pr-2' size={15}><IoIosArrowBack /></span>
         Previous Page
       </div>
       <div className="box-border lg:w-[80%] lg:h-[50%] md:w-[100%] pb-10 my-5 text-slate-900 shadow-2xl backdrop-blur-sm bg-white rounded">

@@ -1,12 +1,13 @@
 /*eslint-disable*/
 import React from 'react';
+import { urlFor } from '../utils/client';
 
 import Link from 'next/link';
 import Box from '@mui/material/Box';
 import { MdLocalGasStation } from 'react-icons/md';
 import { GiCarSeat } from 'react-icons/gi';
 
-const CarCards = ({ name, mpg, img, seats, monthlyPrice }) => {
+const CarCards = ({ name, mpg, image, seats, monthlyPrice }) => {
     return (
         <div className="box-border h-50 my-5 text-slate-900 shadow-2xl backdrop-blur-sm w-full h-full bg-white rounded-b ">
             <Box className="backdrop-blur-md sm:w-[250px]"
@@ -18,7 +19,7 @@ const CarCards = ({ name, mpg, img, seats, monthlyPrice }) => {
                 <Box className='flex flex-col'>
                     <Box className='pb-2'>
                         <Box className='rounded-t' >
-                            <img className="object-fit h-44 w-96 rounded-t" alt="car-image" src={`${img}`} />
+                            <img className="object-fit h-44 w-96 rounded-t" alt="car-image" src={urlFor(image).width(250).url()} />
                         </Box>
                         <Box className="flex flex-col justify-between p-2 pt-5 gap-1">
                             <Box className='pl-1'>
