@@ -34,9 +34,25 @@ export default {
       type: 'number',
     },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
+      name: 'km',
+      title: 'Km',
+      type: 'string',
+    },
+    {
+      name: 'doors',
+      title: 'Doors',
+      type: 'number',
+    },
+    {
+      name: 'engine',
+      title: 'Engine',
+      type: 'string',
+    },
+    {
+      name: 'images',
+      title: 'Images',
+      type: 'array',
+      of: [{ type: 'image' }],
       options: {
         hotspot: true
       }

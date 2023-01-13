@@ -10,7 +10,7 @@ const CardLayout = ({ searchResults }) => {
     <div key={car.title} className="justify-evenly">
       <CarCards
         name={car.title}
-        image={car.image}
+        images={car.images}
         monthlyPrice={car.price}
         mpg={car.mpg}
         transmission={car.transmission}
