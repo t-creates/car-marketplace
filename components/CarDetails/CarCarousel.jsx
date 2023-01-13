@@ -6,7 +6,7 @@ import { urlFor } from '../../utils/client';
 
 const CarCarousel = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0);
-  const totalImages = (images?.length - 1);
+  const totalImages = (images.length - 1);
 
   const handlePrevClick = () => {
     if (currentImage !== 0) {
