@@ -1,4 +1,4 @@
-#Car Marketplace
+# Car Marketplace
 
 ### Car Marketplace Application
 
@@ -58,14 +58,14 @@ Make sure you have all the necessary prerequisites installed on your system. Fol
 - Run the following command to clone the project from GitHub:
     
     ```bash
-    git clone https://github.com/JavaScript-Mastery-PRO/Web3_CarRent.git
+    git clone https://github.com/t-creates/car-marketplace.git
     ```
     
-- This will create a new directory called "Web3_CarRent" in the current location, containing the code for the Car Rent project.
+- This will create a new directory called "car-marketplace" in the current location, containing the code for the Car Rent project.
 - Navigate to the project directory by running the following command:
     
     ```bash
-    cd Web3_CarRent
+    cd car-marketplace
     ```
     
 - Run the following command to install the project's dependencies using npm:
