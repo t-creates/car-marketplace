@@ -41,7 +41,7 @@ const CarCarousel = ({ images }) => {
       </div>
       <div className="flex flex-row flex-1 overflow-scroll scrollbar-hide mt-5 gap-2">
         {images.map((selectedCar, index) => (
-          <div className="min-w-[180px] min-h-[110px] relative focus:outline-2 focus:outline-blue-500" key={selectedCar.title}>
+          <div className="min-w-[180px] min-h-[110px] relative" key={selectedCar.title}>
             <Image
               src={urlFor(selectedCar).url()}
               layout="fill"

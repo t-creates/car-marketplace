@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return (
     <main>
       <Navbar />
-      <div className="bg-slate-50/100">
+      <div className="bg-white">
         {children}
       </div>
       <Footer />

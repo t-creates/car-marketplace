@@ -57,7 +57,10 @@ const Footer = () => {
 					))}
 				</div>
 			</div>
-			<div className="flex flex-col justify-center items-center text-center p-5 bg-gray-200">
+			<div className="flex flex-col justify-center items-center text-center p-5 bg-gray-200 text-grey-200">
+				<div className="flex">
+					<a href="https://www.freepik.com/free-vector/driving-concept-illustration_30576694.htm#query=cartoon%20car&position=49&from_view=keyword">Image by storyset</a> on Freepik
+				</div>
 				<h2 className=" text-gray-800 font-semibold">
 					© 2021-2022 All rights reserved | Build with ❤ by{" "}
 					<span className="hover:text-blue-600 font-semibold cursor-pointer">
