@@ -12,7 +12,7 @@ import { supportData as support } from "../constants/support";
 const Footer = () => {
 	return (
 		<>
-			<div className="bg-gray-200 w-full flex md:flex-row flex-col justify-around items-start px-12 py-8">
+			<div className="bg-gray-200 border-t-2 border-slate-700 w-full flex md:flex-row flex-col justify-around items-start px-12 py-8">
 				<div className="p-5 ">
 					<ul>
 						<h1 className="text-gray-800 font-bold text-3xl pb-6">
