@@ -66,7 +66,7 @@ const Home = () => {
         <div className="flex w-[75%] justify-center items-center h-fit sm:flex-col md:flex-row">
           <div className="flex flex-col justify-between items-center text-slate-800/90">
             <h3 className="text-5xl pb-10">Best Priced Dealer</h3>
-            <p className="">The Best Priced Dealer Award shines a spotlight on the country's top dealerships for their
+            <p className="">The Best Priced Dealer Award shines a spotlight on the countries top dealerships for their
               commitment to consistently offering transparent pricing and great value for Luxury vehicle shoppers.
             </p>
           </div>
@@ -74,7 +74,7 @@ const Home = () => {
           <div className="flex flex-col justify-between items-center text-slate-800/90">
             <h3 className="text-5xl">No Haggling </h3>
             <h3 className="text-5xl pb-10"> No Hidden Fees</h3>
-            <p>Our pricing is competitive and transparent. Unlike most dealers, we don't have any hidden fees or other costs.
+            <p>Our pricing is competitive and transparent. Unlike most dealers, we do not have any hidden fees or other costs.
               The price you see is the price you pay. No hassle. No haggling.
             </p>
           </div>
