@@ -25,6 +25,7 @@ const Login = () => {
     };
 
     client.createIfNotExists(user);
+    console.log(user);
   };
 
   return (
@@ -35,7 +36,7 @@ const Login = () => {
         </div>
         <div className="shadow-2xl" />
         <GoogleLogin
-          clientId="1020567777273-6rjelg31998d8b8ofb334d8scafube87.apps.googleusercontent.com"
+          clientId={process.env.NEXT_PUBLIC_GOOGLE_GOOGLE_TOKEN}
           render={(renderProps) => (
             <button
               type="button"
