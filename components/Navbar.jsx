@@ -1,10 +1,9 @@
 /*eslint-disable*/
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BiUserCircle } from 'react-icons/bi';
 import { useRouter } from 'next/router';
 
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
-import Link from 'next/link';
 
 const links = [
   { name: "Home", link: "/" },
@@ -13,8 +12,14 @@ const links = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const user = false;
+  const [user, setUser] = useState({});
   const router = useRouter();
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setUser(JSON.parse(window.localStorage.getItem('user')));
+    }
+  }, []);
 
   return (
     <div className={`shadow-lg border-b-2 border-slate-700 w-full fixed top-[-1px] left-0 h-[65px] ${router.query.id ? 'bg-[#A5A8Ac]' : 'bg-[#A5A8Ac]'} z-30`}>
@@ -38,11 +43,21 @@ const Navbar = () => {
             ))
           }
         </ul>
-        <div className="absolute right-16">
-          <a href='/profile'>
-            <BiUserCircle size={28} className='md:mr-5 cursor-pointer hover:text-slate-600' />
-          </a>
-        </div>
+        {user ? (
+          <div className="absolute right-5">
+            <a href='/profile'>
+              <BiUserCircle size={28} className='md:mr-5 cursor-pointer hover:text-slate-600' />
+            </a>
+          </div>
+        ) : (
+          <div className="absolute right-5">
+            <a href='/profile'>
+              <p size={28} className='md:mr-5 text-xl text-slate-100 font-[Poppins] cursor-pointer hover:text-slate-600'>
+                Login
+              </p>
+            </a>
+          </div>
+        )}
       </div>
     </div>
   )
