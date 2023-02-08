@@ -48,7 +48,9 @@ const Home = () => {
       <div className="sm:mb-0 md:mb-24 xl:mb-[350px] lg:mb-[195px] 2xl:mb-[550px] mt-100" />
       <div className="md:flex justify-center items-center mt-[60vh] sm:hidden">
         <div className="flex justify-between gap-10 items-center w-[75%]">
-          <div className="flex flex-col justify-center items-start p-10 rounded-md text-slate-800/90 shadow-lg shadow-black/50">
+          <div className="flex flex-col justify-center items-start p-10 rounded-md text-slate-800/90 shadow-md
+          hover:shadow-lg hover:shadow-black/50 hover:scale-105"
+          >
             <h3 className="text-3xl font-bold">Selling Your Vehicle? <br /> Buying A Car? <br /> Geat A Deal Done In Minutes!</h3>
             {carOffers.map((offer) => (
               <div key={offer.id} className="flex justify-center items-start mt-10">
@@ -57,22 +59,22 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <div className="hover:grow">
+          <div className="hover:scale-105">
             <Image src="/7718861.png" width={750} height={750} className="object-contain bg-transparent" />
           </div>
         </div>
       </div>
       <div className="flex justify-center items-center md:mt-[40vh] sm:mt-24">
         <div className="flex w-[75%] justify-center items-center h-fit sm:flex-col md:flex-row">
-          <div className="flex flex-col justify-between items-center text-slate-800/90">
+          <div className="flex flex-col justify-between md:items-center sm:items-start text-slate-800/90">
             <h3 className="text-5xl pb-10">Best Priced Dealer</h3>
-            <p className="">The Best Priced Dealer Award shines a spotlight on the countries top dealerships for their
+            <p className="pb-10">The Best Priced Dealer Award shines a spotlight on the countries top dealerships for their
               commitment to consistently offering transparent pricing and great value for Luxury vehicle shoppers.
             </p>
           </div>
           <Image src="/bestpriced.png" width={750} height={750} className="object-contain" />
-          <div className="flex flex-col justify-between items-center text-slate-800/90">
-            <h3 className="text-5xl">No Haggling </h3>
+          <div className="flex flex-col justify-between md:items-center sm:items-start text-slate-800/90">
+            <h3 className="text-5xl sm:pt-10 md:pt-0">No Haggling </h3>
             <h3 className="text-5xl pb-10"> No Hidden Fees</h3>
             <p>Our pricing is competitive and transparent. Unlike most dealers, we do not have any hidden fees or other costs.
               The price you see is the price you pay. No hassle. No haggling.
@@ -81,7 +83,7 @@ const Home = () => {
         </div>
       </div>
       <div className="flex justify-center flex-col sm:pt-24 md:pt-[40vh]">
-        <h1 className="text-slate-800 raleway text-shadow-1 text-2xl md:text-4xl mb-2 mt-3 text-center">Search for cars</h1>
+        <h1 className="text-slate-800 raleway text-shadow-1 text-2xl md:text-4xl sm:pl-5 md:pl-0 mb-2 mt-3 sm:text-start md:text-center">Search for cars</h1>
         <SearchBar cars={cars} setSearchResults={setSearchResults} />
       </div>
       <div className="flex flex-row flex-wrap justify-evenly grid-flow-row justify-self-auto mt-96 pb-10 sm:mt-0">

@@ -19,7 +19,7 @@ const SearchBar = ({ cars, setSearchResults }) => {
           onChange={handleSearch}
           className="lg:w-[750px] lg:h-[35px] md:w-[450px] text-xl rounded bg-white
                     font-light p-2 shadow-xl border-2 border-slate-300 text-slate-800 focus:outline-none"
-          placeholder=" ..." />
+          placeholder=" Search by name..." />
         <button className="bg-transparent rounded">
           <BiSearch className="hover:scale-125 ml-1 cursor-pointer text-slate-800/80" size={35} />
         </button>
