@@ -38,12 +38,12 @@ const Navbar = () => {
          left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-16 bg-slate-500' : 'top-[-490px]'}`}>
           {
             links.map((link) => (
-              <li key={link.name} className='md:ml-8 text-xl justify-between md:my-0 my-7 md:hidden sm:grid'>
+              <li key={link.name} className='md:ml-16 text-xl justify-between md:my-0 my-7'>
                 <a href={link.link} className='text-slate-100 hover:text-slate-600 font-[Poppins] duration-500'>{link.name}</a>
               </li>
             ))
           }
-          <li className='md:ml-8 text-xl justify-between md:my-0 my-7'>
+          <li className='md:ml-8 text-xl justify-between md:my-0 my-7 md:hidden sm:grid'>
             <a href='/profile' className='text-slate-100 hover:text-slate-600 font-[Poppins] duration-500'>
               {user ? user.name : 'Login'}
             </a>
