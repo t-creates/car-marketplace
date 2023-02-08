@@ -16,7 +16,7 @@ const CarCards = ({ name, mpg, images, seats, monthlyPrice }) => {
                     <Box className='h-full md:w-[75%] sm:w-full relative'>
                         <img className="object-fit h-full w-full md:rounded-l sm:rounded-t overflow-hidden object-center" alt="car-image" src={urlFor(images[0])} />
                     </Box>
-                    <Box className="flex flex-col justify-between p-2 pt-5 gap-1 items-start md:w-[50%] sm:w-full">
+                    <Box className="flex flex-col justify-between p-2 pt-5 gap-1 items-start h-full md:w-[50%] sm:w-full">
                         <Box className='font-extrabold text-base pl-1 raleway'>
                             {name}
                         </Box>
@@ -30,10 +30,10 @@ const CarCards = ({ name, mpg, images, seats, monthlyPrice }) => {
                             <GiCarSeat size={20} />
                             <span className='pl-2'>{seats} Seats</span>
                         </Box>
-                        <Box className='flex flex-1 items-center w-full'>
+                        <Box className='flex flex-1 items-center w-full h-full'>
                             <Box
                                 backgroundColor="white"
-                                className="rounded mx-3 md:items-end sm:items-center justify-center flex w-full">
+                                className="rounded mx-3 md:items-end sm:items-center justify-end flex h-full w-full">
                                 <Link href={`/car-details/${name}`}>
                                     <button
                                         type="button"
