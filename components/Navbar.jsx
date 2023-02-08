@@ -34,23 +34,29 @@ const Navbar = () => {
             className={open ? 'close bg-slate-700' : 'menu'}></MenuOutlinedIcon>
         </div>
 
-        <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-inherit md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-16 bg-slate-500' : 'top-[-490px]'}`}>
+        <ul className={`md:flex md:items-center pb-0 absolute md:static bg-inherit md:z-auto z-[-1]
+         left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-16 bg-slate-500' : 'top-[-490px]'}`}>
           {
             links.map((link) => (
-              <li key={link.name} className='md:ml-8 text-xl justify-between md:my-0 my-7'>
+              <li key={link.name} className='md:ml-8 text-xl justify-between md:my-0 my-7 md:hidden sm:grid'>
                 <a href={link.link} className='text-slate-100 hover:text-slate-600 font-[Poppins] duration-500'>{link.name}</a>
               </li>
             ))
           }
+          <li className='md:ml-8 text-xl justify-between md:my-0 my-7'>
+            <a href='/profile' className='text-slate-100 hover:text-slate-600 font-[Poppins] duration-500'>
+              {user ? user.name : 'Login'}
+            </a>
+          </li>
         </ul>
         {user ? (
-          <div className="absolute right-5">
+          <div className="absolute right-5 sm:hidden md:grid">
             <a href='/profile'>
               <BiUserCircle size={28} className='md:mr-5 cursor-pointer hover:text-slate-600' />
             </a>
           </div>
         ) : (
-          <div className="absolute right-5">
+          <div className="absolute right-5 sm:hidden md:grid">
             <a href='/profile'>
               <p size={28} className='md:mr-5 text-xl text-slate-100 font-[Poppins] cursor-pointer hover:text-slate-600'>
                 Login
