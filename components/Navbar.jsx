@@ -7,7 +7,7 @@ import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 
 const links = [
   { name: "Home", link: "/" },
-  { name: "Sell a car", link: "/car-sale" },
+  { name: "Sell", link: "/car-sale" },
 ];
 
 const Navbar = () => {
@@ -52,20 +52,28 @@ const Navbar = () => {
         {user ? (
           <div className="absolute right-5 sm:hidden md:grid">
             <a href='/profile'>
+              <p size={28} className='md:mr-5 text-xl text-slate-100 font-[Poppins] cursor-pointer hover:text-slate-600'>
+                {user.name}
+              </p>
               <BiUserCircle size={28} className='md:mr-5 cursor-pointer hover:text-slate-600' />
             </a>
           </div>
         ) : (
-          <div className="absolute right-5 sm:hidden md:grid">
-            <a href='/profile'>
-              <p size={28} className='md:mr-5 text-xl text-slate-100 font-[Poppins] cursor-pointer hover:text-slate-600'>
-                Login
-              </p>
-            </a>
+          <div className="absolute right-5 sm:hidden md:flex md:flex-row">
+            <div>
+              <a href='/profile'>
+                <p size={28} className='md:mr-5 text-xl text-slate-100 font-[Poppins] cursor-pointer hover:text-slate-600'>
+                  Login
+                </p>
+              </a>
+            </div>
+            <div>
+              <BiUserCircle size={28} className='md:mr-5 cursor-pointer hover:text-slate-600' />
+            </div>
           </div>
         )}
       </div>
-    </div>
+    </div >
   )
 }
 

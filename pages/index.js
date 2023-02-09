@@ -67,13 +67,13 @@ const Home = () => {
       <div className="flex justify-center items-center md:mt-[40vh] sm:mt-24">
         <div className="flex w-[75%] justify-center items-center h-fit sm:flex-col md:flex-row">
           <div className="flex flex-col justify-between md:items-center sm:items-start text-slate-800/90">
-            <h3 className="text-5xl pb-10">Best Priced Dealer</h3>
-            <p className="pb-10">The Best Priced Dealer Award shines a spotlight on the countries top dealerships for their
+            <h3 className="text-5xl pb-[94px]">Best Priced Dealer</h3>
+            <p className="sm:pb-10 md:pb-0">The Best Priced Dealer Award shines a spotlight on the countries top dealerships for their
               commitment to consistently offering transparent pricing and great value for Luxury vehicle shoppers.
             </p>
           </div>
           <Image src="/bestpriced.png" width={750} height={750} className="object-contain" />
-          <div className="flex flex-col justify-between md:items-center sm:items-start text-slate-800/90">
+          <div className="flex flex-col justify-between md:items-start sm:items-start text-slate-800/90">
             <h3 className="text-5xl sm:pt-10 md:pt-0">No Haggling </h3>
             <h3 className="text-5xl pb-10"> No Hidden Fees</h3>
             <p>Our pricing is competitive and transparent. Unlike most dealers, we do not have any hidden fees or other costs.
