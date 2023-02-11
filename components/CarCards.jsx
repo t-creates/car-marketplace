@@ -38,7 +38,7 @@ const CarCards = ({ name, mpg, images, seats, monthlyPrice }) => {
                                     <button
                                         type="button"
                                         className="border-2 rounded-sm bg-slate-50/75 border-slate-800 text-slate-800
-                                     hover:bg-slate-50/75 h-fit w-full hover:invert"
+                                     hover:bg-slate-50/75 h-fit w-full hover:bg-slate-800 hover:border-white hover:text-white"
                                     >
                                         See More Details
                                     </button>
