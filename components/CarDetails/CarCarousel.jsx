@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
 import { urlFor } from '../../utils/client';
