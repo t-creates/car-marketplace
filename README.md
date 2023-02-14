@@ -10,7 +10,7 @@ Car Marketplace features a user-friendly interface and secure payment processing
 
 Visit the application live demo.
 
-<Video/GIF/Screenshot of the application>
+<img width="1436" alt="Screenshot 2023-02-08 at 5 08 36 PM" src="https://user-images.githubusercontent.com/76760849/218865741-859d0764-3fb6-4e9e-80df-4b1658847830.png">
 
 ### Built With
 
