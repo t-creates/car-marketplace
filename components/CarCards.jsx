@@ -14,7 +14,7 @@ const CarCards = ({ name, mpg, images, seats, monthlyPrice }) => {
             <Box className=" md:w-[450px] md:h-[250px] sm:w-fit sm:h-full">
                 <Box className='flex md:flex-row sm:flex-col h-full'>
                     <Box className='h-full md:w-[75%] sm:w-full relative'>
-                        <img className="object-fit h-full w-full md:rounded-l sm:rounded-t overflow-hidden object-center" alt="car-image" src={urlFor(images[0])} />
+                        <img className="object-cover h-full w-full md:rounded-l sm:rounded-t overflow-hidden object-center" alt="car-image" src={urlFor(images[0])} />
                     </Box>
                     <Box className="flex flex-col justify-between p-2 pt-5 gap-1 items-start h-full md:w-[50%] sm:w-full">
                         <Box className='font-extrabold text-base pl-1 raleway'>
