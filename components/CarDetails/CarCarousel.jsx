@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
 import { urlFor } from '../../utils/client';
@@ -23,7 +22,6 @@ const CarCarousel = ({ images }) => {
   return (
     <>
       <div className="w-full md:h-[375px] sm:h-[250px] relative flex flex-row items-center justify-between">
-        <Image className="rounded" src={urlFor(images[currentImage]).url()} layout="fill" />
         <button
           onClick={handlePrevClick}
           type="button"
@@ -31,6 +29,11 @@ const CarCarousel = ({ images }) => {
         >
           <BsChevronLeft size={30} />
         </button>
+        <img
+          className="object-cover h-full w-full overflow-hidden object-center"
+          alt="car"
+          src={urlFor(images[currentImage]).url()}
+        />
         <button
           onClick={handleNextClick}
           type="button"
@@ -42,11 +45,11 @@ const CarCarousel = ({ images }) => {
       <div className="flex flex-row flex-1 overflow-scroll scrollbar-hide mt-5 gap-2">
         {images.map((selectedCar, index) => (
           <div className="min-w-[180px] min-h-[110px] relative" key={selectedCar.title}>
-            <Image
+            <img
               src={urlFor(selectedCar).url()}
-              layout="fill"
-              className={`rounded ${index === currentImage ? 'active' : ''}`}
-              onClick={() => setCurrentImage(index)}
+              alt="car"
+              className={`object-cover h-full w-full overflow-hidden object-center rounded ${index === currentImage ? 'active' : ''}`}
+            // onClick={() => setCurrentImage(index)}
             />
           </div>
         ))}

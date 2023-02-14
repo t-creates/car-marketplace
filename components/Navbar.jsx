@@ -50,11 +50,13 @@ const Navbar = () => {
           </li>
         </ul>
         {user ? (
-          <div className="absolute right-5 sm:hidden md:grid">
+          <div className="absolute right-5 sm:hidden md:flex md:flex-row">
             <a href='/profile'>
               <p size={28} className='md:mr-5 text-xl text-slate-100 font-[Poppins] cursor-pointer hover:text-slate-600'>
                 {user.name}
               </p>
+            </a>
+            <a>
               <BiUserCircle size={28} className='md:mr-5 cursor-pointer hover:text-slate-600' />
             </a>
           </div>
